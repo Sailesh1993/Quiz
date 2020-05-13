@@ -3,7 +3,6 @@
 use App\Model\Question;
 use Illuminate\Database\Seeder;
 
-
 class QuestionSeeder extends Seeder
 {
     /**
@@ -13,8 +12,11 @@ class QuestionSeeder extends Seeder
      */
     public function run()
     {
-        $question = "what is the capital of finland?";
-        $answer = "Helsinkli";
-        Question::create(['question' => $question,'answer'=>$answer]);
+       $question= "what is the capital city of Nepal?";
+       $answer= "Kathmandu";
+       $questionArray =array("question"=>"$question","answer"=>"$answer");
+
+       Question::create($questionArray);
     }
 }
+

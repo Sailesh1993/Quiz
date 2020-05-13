@@ -16,7 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/question', function () {
-    return \App\Model\Question::all();
-});
+Route::get('/question','QuestionController@index');
 

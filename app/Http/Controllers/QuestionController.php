@@ -13,8 +13,9 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return Question:: all();
+    { //retrive data
+        $questions = Question::all();
+        return view('index',array('questions'=>$questions));
     }
 
     /**
